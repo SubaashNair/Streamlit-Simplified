@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
+# import seaborn as sns
+# import matplotlib.pyplot as plt
 
 # Function to load or create score data
 def load_scores():
@@ -24,8 +24,6 @@ if 'answers' not in st.session_state:
 
 # Quiz Questions
 quiz_questions = {
-    # [Add 20 Questions Here]
-    # Example Question:
     "What does 'pip' stand for?": {
         "options": ["Preferred Installer Program", "Python Installation Package", "Python Interpreter Program", "Package Installer for Python"],
         "answer": "Preferred Installer Program"
