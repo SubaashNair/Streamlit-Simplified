@@ -143,15 +143,11 @@ def run_quiz():
         for question, details in quiz_questions.items():
             st.text(f"{question}: {details['answer']}")
 
-        # Displaying overall scores with Seaborn visualization
+        # Displaying overall scores with Streamlit's built-in bar chart
         st.subheader("Leaderboard")
         score_data = load_scores()
-        sns.set_style("darkgrid")
-        plt.figure(figsize=(10, 6))
-        bar_palette = sns.color_palette("hsv", len(score_data))
-        sns.barplot(x='Score', y='Name', data=score_data, palette=bar_palette)
-        plt.title("Quiz Scores Leaderboard")
-        st.pyplot(plt)
+        score_data = score_data.sort_values(by='Score', ascending=False)
+        st.bar_chart(score_data.set_index('Name')['Score'])
 
 if __name__ == "__main__":
     run_quiz()
