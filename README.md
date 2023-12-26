@@ -58,4 +58,8 @@ For any queries regarding the workshop, please reach out to:
 
 Looking forward to seeing you at the workshop!
 
+<<<<<<< HEAD
 ---
+=======
+---
+>>>>>>> 354c43aa2d8811980bcb0d253233153f1e45423c
